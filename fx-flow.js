@@ -613,6 +613,18 @@ main.el-main,main.el-main.relative.p-0,section.el-container.modalContainer{backg
 .el-tag--danger{background:#FFECEC!important;color:#D63A3D!important}
 .badge{border-radius:999px!important;font-weight:600!important}
 .el-dialog{border-radius:20px!important;overflow:hidden}
+
+/* Choose Sub Flow modal (Inbox): header row stays fixed, only the card grid scrolls, and cards get 2 cols / no icon / full name */
+.el-dialog:has(.next-step-row) .el-dialog__body{overflow:visible!important;max-height:none!important;height:auto!important}
+.el-dialog:has(.next-step-row) .el-form-item__content{display:flex!important;flex-direction:column!important;max-height:70vh!important}
+.el-dialog:has(.next-step-row) .el-form-item__content > .mb-3.el-row.is-justify-space-between{flex:0 0 auto!important}
+.el-dialog:has(.next-step-row) .el-form-item__content > .el-row:not(.el-row--flex){flex:1 1 auto!important;overflow-y:auto!important;min-height:0!important}
+.el-dialog:has(.next-step-row) .el-form-item__content > .mb-3.el-row--flex{flex:0 0 auto!important}
+.el-dialog:has(.next-step-row) .my-2.el-col.el-col-24.el-col-xs-24.el-col-sm-12.el-col-md-8.el-col-lg-6{flex:0 0 50%!important;max-width:50%!important;width:50%!important}
+.el-dialog:has(.next-step-row) .next-step-icon{display:none!important}
+.el-dialog:has(.next-step-row) .next-step-row{padding:12px 16px!important;align-items:center!important;min-height:auto!important;height:auto!important}
+.el-dialog:has(.next-step-row) .next-step-node{width:100%!important}
+.el-dialog:has(.next-step-row) .text-ellipsis.font-weight-bold{white-space:normal!important;overflow:visible!important;text-overflow:unset!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;line-height:1.3!important;font-size:13px!important}
 .el-dialog__header{border-bottom:1px solid #EDF1F5!important}
 .el-dialog__title{font-weight:700!important;color:#0A0E1A!important}
 .el-loading-spinner .path{stroke:#24E4BB!important}
